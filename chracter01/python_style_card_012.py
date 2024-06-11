@@ -4,6 +4,7 @@ from random import choice
 
 Card = collections.namedtuple("Card", ["rank", "suit"])
 
+
 class FrenchDeck:
     ranks = [str(n) for n in range(2, 11)] + list("JQKA")
     suits = "spades diamonds clubs hearts".split()
@@ -19,8 +20,8 @@ class FrenchDeck:
         return len(self._cards)
     
     def __contains__(self, card):
-        print("+++++++++++++++++++++++")
         return card in self._cards
+
 
 if __name__ == "__main__":
     frenchDeck = FrenchDeck()
@@ -42,8 +43,7 @@ if __name__ == "__main__":
     for ele in range(loop):
         print(f"choice at {loop}: {choice(frenchDeck)}")
         loop -= 1
-    
-    
+
     start = time()
     print(f"Card(rank='2', suit='spades') in frenchDeck?: {Card('2', 'spades') in frenchDeck}")
     print(f"cost :{time() - start}")
