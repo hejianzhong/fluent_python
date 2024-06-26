@@ -23,14 +23,6 @@ def snnoze(seconds:int):
 def factorial(n:int) -> int:
     return 1 if n < 2 else n * factorial(n-1)
 
-
-#太牛了
-@functools.lru_cache()
-@clock
-def fibonacci(n):
-    return n if n < 2 else fibonacci(n-2) + fibonacci(n-1)
-
-
 if __name__ == "__main__":
     print("+++++++++++++++++++++++")
     snnoze(.123)
@@ -38,5 +30,3 @@ if __name__ == "__main__":
     print("+++++++++++++++++++++++")
     print(f"6! = {factorial(6)}")
 
-    print("+++++++++++++++++++++++")
-    print(f" {fibonacci(30)}")
